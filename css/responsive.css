@@ -1,0 +1,117 @@
+@media only screen and (max-width:1200px) {}
+
+@media only screen and (max-width:992px) {
+    h1 {
+        font-size: 4em
+    }
+
+    h2 {
+        font-size: 3em
+    }
+
+    h3 {
+        font-size: 2em
+    }
+
+    .no-left-padding {
+        padding-left: 15px
+    }
+
+    .no-right-padding {
+        padding-right: 15px
+    }
+
+    header .src-area {
+        width: 30%
+    }
+}
+
+@media only screen and (max-width:767px) {
+    p {
+        line-height: 1.4
+    }
+
+    h1 {
+        font-size: 3em
+    }
+
+    h2 {
+        font-size: 2.5em
+    }
+
+    h3 {
+        font-size: 1.8em
+    }
+
+    h4 {
+        font-size: 1.5em
+    }
+
+    h5 {
+        font-size: 1.2em
+    }
+
+    .section {
+        padding: 40px 0 10px
+    }
+
+    header .main-menu {
+        display: none;
+        float: none;
+        clear: both;
+        border-top: 1px solid #ccc
+    }
+
+    header .main-menu>li {
+        display: block;
+        float: none;
+        border-bottom: 1px solid #ddd
+    }
+
+    header .main-menu>li:last-child {
+        border-bottom: 0
+    }
+
+    header .main-menu li>a,
+    header .main-menu ul.drop-down li>a {
+        display: block;
+        line-height: 1;
+        height: auto;
+        padding: 15px;
+        background: 0 0
+    }
+
+    header .src-area {
+        width: 100%
+    }
+
+    .menu-nav-icon {
+        display: inline-block
+    }
+
+    .post-style-2 .blog-image {
+        width: 100%;
+        height: auto;
+        float: none
+    }
+
+    .post-style-2 .blog-info {
+        height: auto;
+        width: 100%
+    }
+
+    footer {
+        padding: 40px 0 0;
+        margin-top: 0
+    }
+}
+
+@media only screen and (max-width:479px) {
+    body {
+        font-size: 14px
+    }
+}
+
+@media only screen and (max-width:359px) {}
+
+@media only screen and (max-width:290px) {}
