@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Contact List - Faker.js Tutorial with Firebase</title>
 </head>
+
 <body>
     <div class="container">
         <div class="row mt-4">
@@ -15,37 +17,38 @@
                 <button onclick="newdata()" class="btn-warning btn-block">Generate New Data</button>
             </div>
         </div>
-<div class="row">
-    <div class="col-md-4" id="fake">
+        <div class="row">
+            <div class="col-md-4" id="fake">
 
+            </div>
+            <div class="col-md-8 mt-2">
+                <h2>Contact List</h2>
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Company Name</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablec"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-12"><button
+                    class="btn-info btn-block" onclick="window.location.href = 'https://www.github.com/fcetinkaya';">Fatih Çetinkaya
+                    - Github</button></div>
+        </div>
     </div>
-<div class="col-md-8 mt-3">
-    <h2>Contact List</h2>
-<table class="table table-sm">
-    <thead>
-        <tr>
-            <th scope="col">Name</th>
-            <th scope="col">E-mail</th>
-            
-            <th scope="col"></th>
-        </tr>
-    </thead>
-</table>
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-    </div>
+       <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
@@ -55,5 +58,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+    <script src="faker.min.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
