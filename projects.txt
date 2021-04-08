@@ -1,4 +1,10 @@
 1. Voiting App - Chart.Js Tutorial with Firebase
-2. Javascript Random Emoji
+2. Random Emoji Generator
 3. Basic Form Validation
-4. 
+4. Random Background Color Generator
+5. Random Image Generator
+6. Random Password Generator
+7. Contact List - Faker.js Tutorial with Firebase
+8. 
+9. 
+10. 
