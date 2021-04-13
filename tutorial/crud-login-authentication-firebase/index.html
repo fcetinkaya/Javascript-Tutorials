@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD,Login and Authentication with Firebase</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body id="bodyid" class="text-center">
+    <form id="formjs" class="form-sigin"></form>
+    <div id="crud" class="container" style="height: 100vh;"></div>
+    <div class="row mt-5">
+        <div id="firstSection" class="col-md-6">
+            <form id="form" class="border p-4 mb-4">
+                <div class="form-group">
+                    <label>Task</label>
+                    <input required type="text" class="form-control" id="task" placeholder="Enter Task">
+                </div>
+
+                <div class="form-group">
+                    <label>Description</label>
+                    <input required type="text" class="form-control" id="description" placeholder="Description">
+                </div>
+                <P style="display: none;" id="taskkey"></P>
+                <button type="button" id="button1" class="btn-block btn btn-primary">Add Task</button>
+                       <button type="button" id="button2" class="btnop2 btn btn-success" style="display:none;" onclick="updateTask(2)">Update Task</button>
+                       <button type="button" id="button3" class="btnop2 btn btn-danger" style="display:none;" onclick="cancel()">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>
