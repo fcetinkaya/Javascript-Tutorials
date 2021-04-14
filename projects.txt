@@ -5,6 +5,6 @@
 5. Random Image Generator
 6. Random Password Generator
 7. Contact List - Faker.js Tutorial with Firebase
-8. 
+8. Login,Authentication and CRUD with Firebase
 9. 
 10. 

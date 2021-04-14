@@ -13,28 +13,6 @@
 <body id="bodyid" class="text-center">
     <form id="formjs" class="form-sigin"></form>
     <div id="crud" class="container" style="height: 100vh;"></div>
-    <div class="row mt-5">
-        <div id="firstSection" class="col-md-6">
-            <form id="form" class="border p-4 mb-4">
-                <div class="form-group">
-                    <label>Task</label>
-                    <input required type="text" class="form-control" id="task" placeholder="Enter Task">
-                </div>
-
-                <div class="form-group">
-                    <label>Description</label>
-                    <input required type="text" class="form-control" id="description" placeholder="Description">
-                </div>
-                <P style="display: none;" id="taskkey"></P>
-                <button type="button" id="button1" class="btn-block btn btn-primary">Add Task</button>
-                       <button type="button" id="button2" class="btnop2 btn btn-success" style="display:none;" onclick="updateTask(2)">Update Task</button>
-                       <button type="button" id="button3" class="btnop2 btn btn-danger" style="display:none;" onclick="cancel()">Cancel</button>
-            </form>
-        </div>
-    </div>
-
-
-
 
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
@@ -52,5 +30,6 @@
     </script>
     <script src="main.js"></script>
 </body>
+
 
 </html>
