@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commere - Materialize and Authentication with Firebase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="render()">
+    <header>
+        <nav class="green- accent-4">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo m-lg-2">
+                    <i style="font-size: 3rem!important;" class="material-icons">store</i> Healthy Food
+                </a>
+                <ul class="right hide-on-med-and-down" id="nav-mobile">
+                    <li>
+                        <a href="cart.html">
+                            Shopping Cart <span id="cart_n"></span>
+                        </a>
+                    </li>
+                    <li><a href="#modal1" class="modal-trigger">Admin</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main role="main">
+        <div style="height: 70vh;">
+            <div class="fullscreen-video-wrap">
+                <video src="video.mp4" autoplay muted loop type="video/mp4"></video>
+                <div class="header-content">
+                    <div class="header2">
+                        <h1>Organic Store</h1>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the
+                            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                            of type and
+                            scrambled it to make a type specimen book
+                        </p>
+                        <a class="btb">Find Out More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

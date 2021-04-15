@@ -6,5 +6,5 @@
 6. Random Password Generator
 7. Contact List - Faker.js Tutorial with Firebase
 8. Login,Authentication and CRUD with Firebase
-9. 
+9. E-Commere - Materialize and Authentication with Firebase
 10. 
