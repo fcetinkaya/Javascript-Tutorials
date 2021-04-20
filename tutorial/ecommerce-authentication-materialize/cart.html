@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commere - Materialize and Authentication with Firebase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="render()">
+    <header>
+        <nav class="green- accent-4">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo m-lg-2">
+                    <i style="font-size: 3rem!important;" class="material-icons">store</i> Healthy Food
+                </a>
+                <ul class="right hide-on-med-and-down" id="nav-mobile">
+                    <li>
+                        <a href="cart.html">
+                            Shopping Cart <span id="cart_n"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row" id="row2">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Remove</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="tableProducts">
+
+                </tbody>
+                <tfoot id="total">
+
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="row">
+                <form autocomplete="off" id="formCart" class="col s12">
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="userName" type="text" class="validate" required>
+                            <label for="icon_prefix">E-mail</label>
+                        </div>
+
+                           <div class="input-field col s12">
+                               <i class="material-icons prefix">email</i>
+                               <input id="userEmail" type="text" class="validate" required>
+                               <label for="icon_prefix">E-mail</label>
+                           </div>
+
+                           <div class="input-field col s12">
+                               <select id="userSelect" class="browser-default">
+                                   <option value="Credit Card 1">Credit Card 1</option>
+                                   <option value="Credit Card 2">Credit Card 2</option>
+                                   <option value="Credit Card 3">Credit Card 3</option>
+                               </select>
+                           </div>                           
+                    </div>
+                    <button type="submit" name="action" class="btn waves-effect waves-light">Submit 
+                        <i class="material-icons right">send</i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>
