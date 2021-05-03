@@ -23,7 +23,7 @@
                     <li>
                         <a href="cart.html">
                             Shopping Cart <span id="cart_n"></span>
-                        </a>
+                        </a>a
                     </li>
                     <li><a href="#modal1" class="modal-trigger">Admin</a></li>
                 </ul>
@@ -49,16 +49,53 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            <br />
+            <h2 id="fruit">Fruit</h2>
+            <hr>
+            <div class="row" id="fruitDIV"></div>
+            <h2 id="juice">Juice</h2>
+            <hr>
+            <div class="row" id="juiceDIV"></div>
+            <h2 id="salad">Salad</h2>
+            <hr>
+            <div class="row" id="saladDIV"></div>
+            <hr class="featurette-divider">
+        </div>
+        <footer class="container">
+            <p class="float-right">
+                <a href="#">Top</a>
+            </p>
+            <div class="row">
+                Fatih Çetinkaya - Software Developer
+            </div>
+        </footer>
     </main>
 
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="row">
+                <form id="formLogin" autocomplete="off" class="col s12">
 
+                    <div class="input-field col s12"><i class="material-icons prefix">account_circle</i>
+                        <input type="email" id="userName" class="validate" required>
+                        <label for="icon_prefix">E-mail</label>
+                    </div>
 
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">fingerprint</i>
+                        <input type="password" id="userPassword" required class="validate">
+                        <label for="icon_prefix">Password</label>
+                    </div>
 
+                    <button type="submit" name="action" class="btn waves-effect waves-light">
+                        Submit <i class="material-icons right">send</i>
+                    </button>
 
-
-
-
-
+                </form>
+            </div>
+        </div>
+    </div>
 
 
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
