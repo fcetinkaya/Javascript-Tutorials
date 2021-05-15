@@ -93,13 +93,13 @@
 
              }
          }
-         con=con+1;
+         con = con + 1;
      }
-     if (total()==0) {
-         document.getElementById('total').innerHTML='';
+     if (total() == 0) {
+         document.getElementById('total').innerHTML = '';
      } else {
-         document.getElementById('total').innerHTML=
-         `
+         document.getElementById('total').innerHTML =
+             `
          <tr>
          <th></th>
          <td></td>
@@ -126,4 +126,137 @@
   </tr>`;
      }
  }
+
+ function reduceAmount(id) {
+     var productsLocal = JSON.parse(localStorage.getItem('cart'));
+     for (let index = 0; index < productsLocal.length; index++) {
+         if (productsLocal[index].id == id) {
+             if (productsLocal[index].quantity > 1) {
+                 productsLocal[index].quantity = parseInt(productsLocal[index].quantity) - 1;
+                 localStorage.setItem("cart", JSON.stringify(productsLocal));
+                 updateCart();
+             } else {
+
+             }
+         } else {
+
+         }
+     }
+ }
+
+ function addAmount(id) {
+     var productsLocal = JSON.parse(localStorage.getItem("cart"));
+     for (let index = 0; index < productsLocal.length; index++) {
+         if (productsLocal[index].id == id) {
+             if (productsLocal[index].quantity > 0) {
+                 productsLocal[index].quantity = parseInt(productsLocal[index].quantity) + 1;
+                 localStorage.setItem("cart", JSON.stringify(productsLocal));
+                 updateCart();
+             } else {
+
+             }
+         } else {
+
+         }
+     }
+ }
+
+ // RENDER
+ (() => {
+     var productsLocal = JSON.parse(localStorage.getItem("cart"));
+     var cartn = document.getElementById("cart_n");
+
+     for (let index = 0; index < productsLocal.length; index++) {
+         document.getElementById("tableProducts").innerHTML += `
+<tr>
+<th>${index+1}</th>
+<td><button class="waves-effect waves-light btn red darken-4" onclick="remove(${productsLocal[index].id})">X</button></td>
+<td><img style="width:5rem; src="${productsLocal[index].img}"></td>
+<td>${productsLocal[index].name}</td>
+<td>
+<button class="waves-effect waves-light btn purple darken-4" onclick="reduceAmount(${productsLocal[index].id})">-</button>
+<input style="width:2rem;" id="${productsLocal[index].id}" value="${productsLocal[index].quantity}" disabled>
+<button class="waves-effect waves-light btn purple darken-4" onclick="addAmount(${productsLocal[index].id})">+</button>
+</td>
+<td>$ ${productsLocal[index].price*productsLocal[index].quantity}</td>
+</tr>
+`;
+
+         productsLocal[index].total = productsLocal[index].price * productsLocal[index].quantity
+         localStorage.setItem('cart', JSON.stringify(productsLocal));
+     }
+
+     if (total() == 0) {
+         document.getElementById('total').innerHTML = '';
+     } else {
+         document.getElementById('total').innerHTML = `
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td></td>
+<td>
+<h5>Total:</h5>
+</td>
+<td>
+$ ${total()}
+</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+<td></td>
+<td></td>
+<td>
+   <button onclick="clean()" class="yellow accent-4 waves-effect waves-light btn">Clean</button>
+</td>
+<td>
+<button href="#modal1" class="modal-trigger green accent-4 waves-effect waves-light btn">Buy></button>
+</td>
+
+</tr>
+`
+     }
+     cartn.innerHTML = `[${productsLocal.lenght}]`;
+ })();
+
+ $(document).ready(() => {
+     $('.modal').modal();
+     var userName = document.getElementById('userName');
+     var userEmail = document.getElementById('userEmail');
+     var userSelect = document.getElementById('userSelect');
+     var d = new Date();
+     var t = d.getTime();
+     var order = t - 300;
+
+     $('#formCart').submit(function (e) {
+         e.preventDefault();
+         var pp = JSON.parse(localStorage.getItem('cart'));
+         firebase.firestore().collection("sales").add({
+                 id: t + 1,
+                 userOrder: order,
+                 userName: userName.value,
+                 userEmail: userEmail.value,
+                 payment: userSelect.value,
+                 userDate: d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear(),
+                 hour: d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds(),
+                 userYear: d.getFullYear(),
+                 products: pp,
+                 total: total()
+             })
+             .then(() => {
+                 swal.fire({
+                     position: 'center',
+                     icon: 'success',
+                     title: 'Purchase made successfully!',
+                     text: `Your purchase order is: ${order}`,
+                     showConfirmButton: true,
+                     timer: 50000
+                 });
+                 $('.modal').modal('close');
+                 clean();
+             });
+     })
+ });
+
  

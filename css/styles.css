@@ -401,15 +401,3 @@ header .src-area span {
     padding: 30px
 }
 
-.load-more-btn {
-    padding: 15px 40px;
-    margin: 10px 0 30px;
-    transition: all .3s;
-    box-shadow: 0 0 2px rgba(0, 0, 0, .4);
-    background: #c3d8f5
-}
-
-.load-more-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 5px 10px 20px rgba(0, 0, 0, .3)
-}
