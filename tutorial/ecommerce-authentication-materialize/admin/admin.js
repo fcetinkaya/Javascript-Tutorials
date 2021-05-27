@@ -113,7 +113,29 @@ $(document).ready(function () {
                 tdi.first().addClass('fa-minus-square');
             }
         });
-    },4000)
+    }, 4000)
 });
 
 // Firebase Configuration
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyBKgZcE0vfkeGkEIrw-ZnqWbyF8IZIf_08",
+    authDomain: "fcetinkaya-javascript-tutorial.firebaseapp.com",
+    projectId: "fcetinkaya-javascript-tutorial",
+    storageBucket: "fcetinkaya-javascript-tutorial.appspot.com",
+    messagingSenderId: "968114376602",
+    appId: "1:968114376602:web:d426bd3a89f69a28397423"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+
+var sales = []
+firebase.firestore().collection('sales')
+onSnapshot(function (querySnapshot) {
+    querySnapshot.forEach(function (doc) {
+        console.log(doc.data())
+        sales.push(doc.data())
+    })
+    finaldata = sales
+})
