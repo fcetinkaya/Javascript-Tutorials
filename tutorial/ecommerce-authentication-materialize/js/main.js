@@ -3,7 +3,7 @@ var products = [];
 var cartItems = [];
 var cart_n = document.getElementById('cart_n');
 
-if (localStorage.getItem9('positions')) {
+if (localStorage.getItem('positions')) {
     var positions = [JSON.parse(localStorage.getItem('cart_n'))];
 } else {
     var positions = [];
@@ -17,7 +17,7 @@ var saladDIV = document.getElementById('saladDIV');
 //INFORMATION
 var FRUIT = [{
         id: 1,
-        cart = false,
+        cart : false,
         img: 'img/fruits/fruit1.jpg',
         quantity: 1,
         total: 0,
@@ -26,7 +26,7 @@ var FRUIT = [{
     },
     {
         id: 2,
-        cart = false,
+        cart : false,
         img: 'img/fruits/fruit2.jpg',
         quantity: 1,
         total: 0,
@@ -35,7 +35,7 @@ var FRUIT = [{
     },
     {
         id: 3,
-        cart = false,
+        cart : false,
         img: 'img/fruits/fruit3.jpg',
         quantity: 1,
         total: 0,
@@ -44,7 +44,7 @@ var FRUIT = [{
     },
     {
         id: 4,
-        cart = false,
+        cart : false,
         img: 'img/fruits/fruit4.jpg',
         quantity: 1,
         total: 0,
@@ -53,7 +53,7 @@ var FRUIT = [{
     },
     {
         id: 5,
-        cart = false,
+        cart : false,
         img: 'img/fruits/fruit5.jpg',
         quantity: 1,
         total: 0,
@@ -62,7 +62,7 @@ var FRUIT = [{
     },
     {
         id: 6,
-        cart = false,
+        cart : false,
         img: 'img/fruits/fruit6.jpg',
         quantity: 1,
         total: 0,
@@ -71,7 +71,7 @@ var FRUIT = [{
     },
     {
         id: 7,
-        cart = false,
+        cart : false,
         img: 'img/fruits/fruit7.jpg',
         quantity: 1,
         total: 0,
@@ -80,7 +80,7 @@ var FRUIT = [{
     },
     {
         id: 8,
-        cart = false,
+        cart : false,
         img: 'img/fruits/fruit8.jpg',
         quantity: 1,
         total: 0,
@@ -91,7 +91,7 @@ var FRUIT = [{
 
 var JUICE = [{
         id: 9,
-        cart = false,
+        cart : false,
         img: 'img/juice/juice1.jpg',
         quantity: 1,
         total: 0,
@@ -100,7 +100,7 @@ var JUICE = [{
     },
     {
         id: 10,
-        cart = false,
+        cart : false,
         img: 'img/juice/juice2.jpg',
         quantity: 1,
         total: 0,
@@ -109,7 +109,7 @@ var JUICE = [{
     },
     {
         id: 11,
-        cart = false,
+        cart : false,
         img: 'img/juice/juice3.jpg',
         quantity: 1,
         total: 0,
@@ -118,7 +118,7 @@ var JUICE = [{
     },
     {
         id: 12,
-        cart = false,
+        cart : false,
         img: 'img/juice/juice4.jpg',
         quantity: 1,
         total: 0,
@@ -129,7 +129,7 @@ var JUICE = [{
 
 var SALAD = [{
         id: 13,
-        cart = false,
+        cart : false,
         img: 'img/salad/salad1.jpg',
         quantity: 1,
         total: 0,
@@ -138,7 +138,7 @@ var SALAD = [{
     },
     {
         id: 14,
-        cart = false,
+        cart : false,
         img: 'img/salad/salad2.jpg',
         quantity: 1,
         total: 0,
@@ -147,7 +147,7 @@ var SALAD = [{
     },
     {
         id: 15,
-        cart = false,
+        cart : false,
         img: 'img/salad/salad3.jpg',
         quantity: 1,
         total: 0,
@@ -156,7 +156,7 @@ var SALAD = [{
     },
     {
         id: 16,
-        cart = false,
+        cart : false,
         img: 'img/salad/salad1.jpg',
         quantity: 1,
         total: 0,
@@ -173,7 +173,7 @@ function HTMLfruitProuct(con) {
 <div class="col s3 wow fadeInUp" data-wow-delay="3s" data-wow-offset="300">
 <div class="card">
 <div class="card-image">
-<img src="${FRUIT[con-1].img}">
+<img src="${FRUIT[con-1].img}" height="125px">
 
 <a onclick="alertCart()" class="btn-floating halfway-fab waves-effect waves-light green">
 <i class="material-icons">shopping_cart</i>
@@ -195,10 +195,10 @@ function HTMLfruitProuct(con) {
         <div class = "col s3 wow fadeInUp" data - wow - delay = "3s" data-wow-offset = "300">
             <div class = "card">
             <div class = "card-image">
-            <img src = "${FRUIT[con-1].img}">
+            <img src ="${FRUIT[con-1].img}" height = "125px">
         
-            < a id = "${btn}"
-            onclick = "card('${FRUIT[con-1].id}','${FRUIT[con-1].cart}','${FRUIT[con-1].img}','${FRUIT[con-1].quantity}','${FRUIT[con-1].total}','${FRUIT[con-1].name}','${FRUIT[con-1].price}','${btn}')" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a><a id="${btn}alert" style="display:none" onclick="alertCart()" class="btn-floating halfway-fab waves-effect waves-light green"><i class="material-icons">shopping_cart</i></a>
+            <a id = "${btn}"
+            onclick = "cart('${FRUIT[con-1].id}','${FRUIT[con-1].cart}','${FRUIT[con-1].img}','${FRUIT[con-1].quantity}','${FRUIT[con-1].total}','${FRUIT[con-1].name}','${FRUIT[con-1].price}','${btn}')" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a><a id="${btn}alert" style="display:none" onclick="alertCart()" class="btn-floating halfway-fab waves-effect waves-light green"><i class="material-icons">shopping_cart</i></a>
         </div>
         <div class = "card-content">
             <i style = "color:orange;" class = "fa fa-star"></i>
@@ -247,7 +247,7 @@ function HTMLjuiceProuct(con) {
             <div class ="card-image">
             <img src ="${JUICE[con-1].img}">
         
-            <a id = "${btn}" onclick = "card('${JUICE[con-1].id}','${JUICE[con-1].cart}','${JUICE[con-1].img}','${JUICE[con-1].quantity}','${JUICE[con-1].total}','${JUICE[con-1].name}','${JUICE[con-1].price}','${btn}')" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a><a id="${btn}alert" style="display:none" onclick="alertCart()" class="btn-floating halfway-fab waves-effect waves-light green"><i class="material-icons">shopping_cart</i></a>
+            <a id = "${btn}" onclick = "cart('${JUICE[con-1].id}','${JUICE[con-1].cart}','${JUICE[con-1].img}','${JUICE[con-1].quantity}','${JUICE[con-1].total}','${JUICE[con-1].name}','${JUICE[con-1].price}','${btn}')" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a><a id="${btn}alert" style="display:none" onclick="alertCart()" class="btn-floating halfway-fab waves-effect waves-light green"><i class="material-icons">shopping_cart</i></a>
         </div>
         <div class = "card-content">
             <i style = "color:orange;" class = "fa fa-star"></i>
@@ -295,8 +295,8 @@ function HTMLsaladProuct(con) {
             <div class = "card-image">
             <img src = "${SALAD[con-1].img}">
         
-            < a id = "${btn}"
-            onclick = "card('${SALAD[con-1].id}','${SALAD[con-1].cart}','${SALAD[con-1].img}','${SALAD[con-1].quantity}','${SALAD[con-1].total}','${SALAD[con-1].name}','${SALAD[con-1].price}','${btn}')" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a><a id="${btn}alert" style="display:none" onclick="alertCart()" class="btn-floating halfway-fab waves-effect waves-light green"><i class="material-icons">shopping_cart</i></a>
+            <a id = "${btn}"
+            onclick = "cart('${SALAD[con-1].id}','${SALAD[con-1].cart}','${SALAD[con-1].img}','${SALAD[con-1].quantity}','${SALAD[con-1].total}','${SALAD[con-1].name}','${SALAD[con-1].price}','${btn}')" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a><a id="${btn}alert" style="display:none" onclick="alertCart()" class="btn-floating halfway-fab waves-effect waves-light green"><i class="material-icons">shopping_cart</i></a>
         </div>
         <div class = "card-content">
             <i style = "color:orange;" class = "fa fa-star"></i>
@@ -392,7 +392,7 @@ function render() {
         localProductCart = JSON.parse(localStorage.getItem('positions'));
     }
 
-    for (let index = 0; index < localProductsCart.length; index++) {
+    for (let index = 0; index < localProductCart.length; index++) {
 
         //FRUIT
         for (let index2 = 0; index2 < FRUIT.length; index2++) {
@@ -423,11 +423,11 @@ function render() {
     }
 
 
-    for (let index = 0; index <= 8; index++) {
+    for (let index = 1; index <= 8; index++) {
         fruitDIV.innerHTML += `${HTMLfruitProuct(index)}`;
     }
 
-    for (let index = 0; index <= 4; index++) {
+    for (let index = 1; index <= 4; index++) {
         juiceDIV.innerHTML += `${HTMLjuiceProuct(index)}`;
         saladDIV.innerHTML += `${HTMLsaladProuct(index)}`;
     }

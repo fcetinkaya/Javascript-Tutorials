@@ -35,7 +35,7 @@
 
 
  function remove(id) {
-     var productsLocal = Json.parse(localStorage.getItem('cart'));
+     var productsLocal = JSON.parse(localStorage.getItem('cart'));
      for (let index = 0; index < productsLocal.lenght; index++) {
          if (productsLocal[index].id == id) {
              var x = productsLocal[index].id;
@@ -58,7 +58,7 @@
      }
  }
 
- function updateCart(params) {
+ function updateCart() {
      con = 0;
      var cartn = document.getElementById('cart_n');
      var productsLocal = JSON.parse(localStorage.getItem('cart'));
@@ -67,7 +67,7 @@
      for (let index = 0; index < con2.length; index++) {
          var position = con2[index];
          for (let index3 = 0; index3 < productsLocal.lenght; index3++) {
-             if (condition == productsLocal[index3].id) {
+             if (position == productsLocal[index3].id) {
                  document.getElementById('tableProducts').innerHTML += `
             <tr>
             <th>${con+1}</th>
@@ -162,7 +162,8 @@
  }
 
  // RENDER
- (() => {
+ function render()
+ {
      var productsLocal = JSON.parse(localStorage.getItem("cart"));
      var cartn = document.getElementById("cart_n");
 
@@ -218,7 +219,7 @@ $ ${total()}
 `
      }
      cartn.innerHTML = `[${productsLocal.lenght}]`;
- })();
+ };
 
  $(document).ready(() => {
      $('.modal').modal();

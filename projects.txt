@@ -9,6 +9,4 @@
 9. E-Commere - Materialize and Authentication with Firebase
 10. CRUD - SweetAlert2 with Firebase
 11. Star Rating System
-12. 
-13. 
-14. 
+12. Sign Up Form Firebase
