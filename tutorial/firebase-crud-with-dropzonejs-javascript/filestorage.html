@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Storage Tutotial</title>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <!--  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <link rel="stylesheet" href="css/reset.css">  -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/modernizr.js"></script>
+    <link rel="stylesheet" href="css/dropzone.min.css" />
+</head>
+
+<body>
+    <div class="loader"></div>
+    <nav>
+        <ul class="cd-primary-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="realdatabase.html">Real Database</a></li>
+            <li><a href="firestore.html">Firestore</a></li>
+            <li><a>Storage</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="intro-message">
+            <h1>File Storage CRUD</h1>
+            <hr class="intro-divider">
+        </div>
+        <div class="row">
+            <div class="col-sm-12 card p-0 mb-5 float-left">
+                <div class="card-header bg-primary">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="w-75 pt-2">
+                                New Files Add
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form action="/" class="dropzone needsclick dz-clickable" id="demo-upload">
+                        <div class="dz-message needsclick">
+                            <button type="button" class="dz-button">Drop files here or click to upload.</button><br>
+                            <span class="note needsclick">(This is just a demo dropzone. Selected files are
+                                <strong>not</strong> actually uploaded.)</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-12 card p-0 mb-5 float-left">
+                <div class="card-header bg-primary">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="w-75 pt-2">
+                                Storage Files List
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body nopadding">
+                    <div id="List" class="row">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="cd-overlay-nav">
+        <span></span>
+    </div> <!-- cd-overlay-nav -->
+
+    <div class="cd-overlay-content">
+        <span></span>
+    </div> <!-- cd-overlay-content -->
+
+    <a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/velocity.min.js"></script>
+    <script src="js/dropzone.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/storage.js"></script>
+</body>
+
+</html>

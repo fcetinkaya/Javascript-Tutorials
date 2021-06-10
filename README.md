@@ -25,14 +25,15 @@ https://fcetinkaya-javascript-tutorial.firebaseapp.com/
 2. CRUD - SweetAlert2 with Firebase
 3. Contact List - Faker.js Tutorial with Firebase
 4. Login,Authentication and CRUD with Firebase
-5. Voiting App - Chart.Js Tutorial with Firebase
-6. Random Password Generator
+5. Firebase CRUD Project with DropzoneJs Javascript
+6. Voiting App - Chart.Js Tutorial with Firebase
 7. Basic Form Validation
 8. Random Background Color Generator
 9. Random Image Generator
 10. Random Emoji Generator
 11. Star Rating System
 12. Sign Up Form Firebase
+13. Random Password Generator
 
 ## Code Examples
 Show examples of usage:

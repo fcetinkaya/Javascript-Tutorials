@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firestore Tutotial</title>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <!--  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <link rel="stylesheet" href="css/reset.css">  -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/modernizr.js"></script>
+</head>
+
+<body>
+    <div class="loader"></div>
+    <nav>
+        <ul class="cd-primary-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="realdatabase.html">Real Database</a></li>
+            <li><a>Firestore</a></li>
+            <li><a href="filestorage.html">Storage</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="intro-message">
+            <h1>Firestore CRUD</h1>
+            <hr class="intro-divider">
+        </div>
+        <div class="row">
+            <div class="col-sm-12 card p-0 mb-5 float-left">
+                <div class="card-header bg-primary">
+                    New Person Add
+                </div>
+                <div class="card-body">
+                    <form id="newPersonForm" name="newPersonForm">
+                        <div class="form-row">
+                            <div class="for m-group col-md-6">
+                                <label for="fnamebox">First Name</label>
+                                <input type="text" class="form-control" name="fnamebox" id="fnamebox" />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="snamebox">Second Name</label>
+                                <input type="text" class="form-control" name="snamebox" id="snamebox">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="countrybox">Country</label>
+                                <input type="text" class="form-control" name="countrybox" id="countrybox">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="citybox">City</label>
+                                <input type="text" class="form-control" name="citybox" id="citybox">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="phonebox">Mobile Phone</label>
+                                <input type="tel" class="form-control" name="phonebox" id="phonebox">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="emailbox">E-Mail</label>
+                                <input type="email" class="form-control" name="emailbox" id="emailbox">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="adressbox">Adress</label>
+                                <input type="text" class="form-control" name="adressbox" id="adressbox">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="form-group col-md-12 p-0">
+                        <input type="submit" id="fsBtn" class="btn btn-primary" value="Save">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 bg-white p-0">
+                <div class="card-header bg-primary text-white">
+                    <strong>Firestore Data List</strong>
+                </div>
+                <div class="card-body nopadding">
+                    <div class="table-responsive">
+                        <table id="fsTable" class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Firstname</th>
+                                    <th>Lastname</th>
+                                    <th>Country</th>
+                                    <th>City</th>
+                                    <th>Phone</th>
+                                    <th>E-Mail</th>
+                                    <th>Adress</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="FS_tableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="fsModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header card-header">
+                    <h4 class="modal-title">Update User Data</h4>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body card-body">
+                    <form id="updatePersonForm">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="u_fnamebox">First Name</label>
+                                <input type="text" class="form-control" name="u_fnamebox" id="u_fnamebox" />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="u_snamebox">Second Name</label>
+                                <input type="text" class="form-control" name="u_snamebox" id="u_snamebox" />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="u_countrybox">Country</label>
+                                <input type="text" class="form-control" name="u_countrybox" id="u_countrybox" />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="u_citybox">City</label>
+                                <input type="text" class="form-control" name="u_citybox" id="u_citybox" />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="u_phonebox">Mobile Phone</label>
+                                <input type="tel" class="form-control" name="u_phonebox" id="u_phonebox" />
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="u_emailbox">E-Mail</label>
+                                <input type="email" class="form-control" name="u_emailbox" id="u_emailbox" />
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="u_adressbox">Adress</label>
+                                <input type="text" class="form-control" name="u_adressbox" id="u_adressbox" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <input type="hidden" name="u_id" id="u_id">
+                    <input type="submit" id="u_fsBtn" class="btn btn-primary" value="Update">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cd-overlay-nav">
+        <span></span>
+    </div> <!-- cd-overlay-nav -->
+
+    <div class="cd-overlay-content">
+        <span></span>
+    </div> <!-- cd-overlay-content -->
+
+    <a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/velocity.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/firestore.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+
+</html>
