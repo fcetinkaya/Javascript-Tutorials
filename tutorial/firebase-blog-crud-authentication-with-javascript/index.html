@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Firebase Blog Project with JQuery">
+    <meta name="author" content="Fatih Çetinkaya">
+    <title>Blog Post - Firebase Blogs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+</head>
+
+<body style="padding-top: 15px;">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Firebase Blogs</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="SignUp.html">New Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="SignIn.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row h-100 mt-5">
+            <!-- Post Content Column -->
+            <div id="blogs" class="col-lg-8">
+            </div>
+            <!-- Sidebar Widgets Column -->
+            <div class="col-md-4">
+                <!-- Search Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Search</h5>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-append">
+                                <button class="btn btn-secondary" type="button">Go!</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Categories</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="https://firebase.google.com/docs/android/setup"
+                                            target="_blank">Android</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://firebase.google.com/docs/ios/setup" target="_blank">iOS</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://firebase.google.com/docs/web/setup" target="_blank">Web</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <a href="https://firebase.google.com/docs/cpp/setup" target="_blank">C++</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://firebase.google.com/docs/unity/setup" target="_blank">Unity</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://firebase.google.com/docs/admin/setup" target="_blank">Admin</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Side Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Firebase by platform</h5>
+                    <div class="card-body">
+                        Firebase gives you the tools to develop high-quality apps, grow your user base, and earn more
+                        money. We cover the essentials so you can monetize your business and focus on your users.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous">
+    </script>
+    <script src="js/config.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -21,19 +21,20 @@ In some examples it is used in firebase database.
 https://fcetinkaya-javascript-tutorial.firebaseapp.com/
 
 ## Projects
-1. E-Commere - Materialize and Authentication with Firebase
-2. CRUD - SweetAlert2 with Firebase
-3. Contact List - Faker.js Tutorial with Firebase
-4. Login,Authentication and CRUD with Firebase
-5. Firebase CRUD Project with DropzoneJs Javascript
-6. Voiting App - Chart.Js Tutorial with Firebase
-7. Basic Form Validation
+1. Firebase E-Commere - Javascript with Materialize and Authentication
+2. Firebase Blog - Javascript with CRUD and Authentication
+3. Firebase CRUD - Javascript with SweetAlert2
+4. Firebase CRUD - Javascript with DropzoneJs
+5. Firebase CRUD - Login and Authentication
+6. Contact List - Faker.js Tutorial with Firebase
+7. Voiting App - Chart.Js Tutorial with Firebase
 8. Random Background Color Generator
 9. Random Image Generator
 10. Random Emoji Generator
 11. Star Rating System
 12. Sign Up Form Firebase
 13. Random Password Generator
+14. Basic Form Validation
 
 ## Code Examples
 Show examples of usage:
